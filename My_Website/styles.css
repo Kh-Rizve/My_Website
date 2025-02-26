@@ -1,0 +1,498 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Header */
+header {
+  background-color: #1a1a1a;
+  color: red;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Style for the logo */
+.nav-bar .logo img {
+  height: 50px; /* Adjust logo size */
+  width: auto;
+  border-radius: 50%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-items li {
+  display: flex;
+  margin: 0 15px;
+}
+
+.nav-items a {
+  display: flex;
+  justify-content: space-between;
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-items li a:hover {
+  color: white;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hide hamburger by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 4px;
+  background-color: red;
+  transition: all 0.3s ease;
+}
+
+/* Responsive styles for the hamburger */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger in smaller screens */
+  }
+
+  .nav-items {
+    display: none; /* Hide nav items by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1a1a1a;
+    width: 200px;
+    padding: 10px;
+  }
+
+  .nav-items li {
+    margin: 10px 0;
+  }
+
+  .nav-items.active {
+    display: flex; /* Show nav items when active */
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Pushes the divs to opposite sides */
+  align-items: center; /* Optional: Align vertically */
+  height: 100vh; /* Full height of the screen */
+  margin: 0;
+  padding: 0 30px; /* Optional: Add some padding */
+  border: none;
+}
+
+.left-div {
+  width: 50%;
+  height: 50%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-div {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-image: url("images/left-img.png");
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating the image */
+}
+
+/* Section Styles */
+.section {
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.project-card {
+  background-color: #1a1a1a;
+  padding: 10px;
+  margin: 10px auto;
+  height: 250px;
+  width: 70%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  align-items: center;
+}
+
+/* Centering container */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 30px; /* viewport height */
+}
+
+/* Button styling */
+.glow-button {
+  background-color: red; /* Solid red background */
+  color: white; /* White text for contrast */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding around the text */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor on hover */
+  transition: box-shadow 0.3s ease; /* Smooth transition for glow */
+  margin-bottom: 30px;
+}
+
+/* Glowing effect on hover */
+.glow-button:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.6),
+    0 0 60px rgba(255, 0, 0, 0.4); /* Stronger glow */
+}
+
+#contact {
+  margin-bottom: 70px;
+}
+
+/* Form Styles */
+form input,
+form textarea,
+form button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  max-width: 400px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #777;
+}
+
+form button {
+  background-color: red;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: darkred;
+}
+
+#formStatus {
+  margin-top: 10px;
+  color: red;
+}
+
+.follow {
+  justify-content: center;
+  text-align: center;
+}
+
+/* Centering container */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Base button styling */
+.social-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Glow and scale transition */
+}
+
+/* GitHub Button */
+.github {
+  background-color: #333;
+}
+
+.github:hover {
+  box-shadow: 0 0 10px #333, 0 0 20px #333, 0 0 30px #333;
+  transform: scale(1.05); /* Slight scale up */
+}
+
+/* LinkedIn Button */
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin:hover {
+  box-shadow: 0 0 10px #0077b5, 0 0 20px #0077b5, 0 0 30px #0077b5;
+  transform: scale(1.05);
+}
+
+/* Instagram Button */
+.instagram {
+  background-color: #e1306c;
+}
+
+.instagram:hover {
+  box-shadow: 0 0 10px #e1306c, 0 0 20px #e1306c, 0 0 30px #e1306c;
+  transform: scale(1.05);
+}
+
+/* Twitter Button */
+.twitter {
+  background-color: #0b192c;
+}
+
+.twitter:hover {
+  box-shadow: 0 0 10px #0b192c, 0 0 20px #0b192c, 0 0 30px #0b192c;
+  transform: scale(1.05);
+}
+
+/* Facebook Button */
+.facebook {
+  background-color: #3b5998;
+}
+
+.facebook:hover {
+  box-shadow: 0 0 10px #3b5998, 0 0 20px #3b5998, 0 0 30px #3b5998;
+  transform: scale(1.05);
+}
+
+.button-container {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 30px; /* Full viewport height, adjust as needed */
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+/* Glowing Button Styles */
+.glow-on-hover {
+  background-color: darkred; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 15px 30px; /* Button padding */
+  font-size: 15px; /* Button text size */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* Position relative for glow effect */
+  overflow: hidden; /* Hide overflow */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.glow-on-hover:focus {
+  outline: none; /* Remove outline */
+}
+
+.glow-on-hover:hover {
+  background-color: red; /* Darker red on hover */
+}
+
+/* Glowing Effect */
+.glow-on-hover::after {
+  content: ""; /* Add empty content for the pseudo-element */
+  position: absolute; /* Position it absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  width: 300%; /* Size larger than button */
+  height: 300%; /* Size larger than button */
+  background: rgba(229, 57, 53, 0.6); /* Semi-transparent red */
+  border-radius: 50%; /* Make it circular */
+  transition: transform 0.5s; /* Transition effect */
+  z-index: -1; /* Send behind the button */
+  transform: translate(-50%, -50%) scale(0); /* Initially hidden */
+}
+
+.glow-on-hover:hover::after {
+  transform: translate(-50%, -50%) scale(1); /* Show on hover */
+}
+
+/* Input styles */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #e63946; /* Red border on focus */
+  outline: none; /* Remove outline */
+}
+
+/* Centering container */
+.platform-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+/* Base button styling */
+.platform-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Glow and scale transition */
+}
+
+/* Codeforces Button */
+.codeforces {
+  background-color: #1f8acb;
+}
+
+.codeforces:hover {
+  box-shadow: 0 0 10px #1f8acb, 0 0 20px #1f8acb, 0 0 30px #1f8acb;
+  transform: scale(1.05); /* Slight scale up */
+}
+
+/* Atcoder Button */
+.atcoder {
+  background-color: #ffffff;
+  color: black;
+}
+
+.atcoder:hover {
+  box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+  transform: scale(1.05); /* Slight scale up */
+}
+
+/* HackerRank Button */
+.hackerrank {
+  background-color: #2ec866;
+}
+
+.hackerrank:hover {
+  box-shadow: 0 0 10px #2ec866, 0 0 20px #2ec866, 0 0 30px #2ec866;
+  transform: scale(1.05);
+}
+
+/* LeetCode Button */
+.leetcode {
+  background-color: #ffa116;
+  color: black; /* Dark text for better contrast */
+}
+
+.leetcode:hover {
+  box-shadow: 0 0 10px #ffa116, 0 0 20px #ffa116, 0 0 30px #ffa116;
+  transform: scale(1.05);
+}
+
+.code-head {
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  color: red;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-div,
+  .right-div {
+    width: 80%;
+    height: 50%;
+  }
+
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .nav-items li {
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .nav-bar {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .glow-on-hover {
+    width: 80%;
+  }
+
+  .platform-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-buttons {
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
